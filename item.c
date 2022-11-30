@@ -5,10 +5,10 @@
 #include "item.h"
 
 struct item{
-    int valor;
+    elem valor;
 };
 
-ITEM* item_criar(int valor){
+ITEM* item_criar(elem valor){
     ITEM* p = (ITEM*)malloc(sizeof(ITEM));
     assert(p != NULL);
 
@@ -24,16 +24,38 @@ void item_apagar(ITEM** item){
     free(*item);
 }
 
-int get_valor(ITEM* item){
+elem get_valor(ITEM* item){
     assert(item != NULL);
     return item->valor;
 }
 
-void set_valor(ITEM* item, int valor){
+void set_valor(ITEM* item, elem valor){
     assert(item != NULL);
     item->valor = valor;
 }
 
-void item_print(ITEM* item){
-    printf("%i ", item->valor);
+void item_print(ITEM* item, tipo_t tipo){
+
+    switch (tipo)
+    {
+        case INT:
+            printf("%d ", (int)item->valor);
+            break;
+        
+        case FLOAT:
+            printf("%.2f ", (float)item->valor);
+            break;
+
+        case DOUBLE:
+            printf("%.2lf ", (double)item->valor);
+            break;
+
+        case CHAR:
+            printf("%c ", (char)item->valor);
+            break;
+
+        default:
+            return;
+    }
+    
 }
