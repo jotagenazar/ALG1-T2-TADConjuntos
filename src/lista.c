@@ -10,8 +10,6 @@ typedef struct no NO;
 struct no
 {
     SET* set;
-    char* nome;
-
     NO* proximo;
 };
 
@@ -52,7 +50,7 @@ SET* lista_buscar(LISTA* lista, char* nome)
 
     while(aux != NULL)
     {
-        if(strcmp(aux->nome, nome) == 0)
+        if(strcmp(set_getNome(aux->set), nome) == 0)
         {
             return aux->set;
         }  
@@ -64,7 +62,7 @@ SET* lista_buscar(LISTA* lista, char* nome)
 }
 
 
-void lista_inserir(LISTA* lista, SET* x, char* nome)
+void lista_inserir(LISTA* lista, SET* x)
 {
     assert(lista != NULL);
 
@@ -73,7 +71,6 @@ void lista_inserir(LISTA* lista, SET* x, char* nome)
 
     novo_no->set = x;
     novo_no->proximo = NULL;
-    novo_no->nome = nome;
 
     if(lista_vazia(lista))
     {
@@ -97,7 +94,7 @@ void lista_remover(LISTA* lista, char* nome)
 
     while(aux != NULL)
     {
-        if(strcmp(aux->nome, nome) == 0)
+        if(strcmp(set_getNome(aux->set), nome) == 0)
         {
             if(aux == lista->comeco)
             {
@@ -108,7 +105,6 @@ void lista_remover(LISTA* lista, char* nome)
                 lista->fim = ant;
 
                 set_apagar(&(aux->set));
-                free(aux->nome);
                 free(aux);
 
                 lista->fim->proximo = NULL;
@@ -123,7 +119,6 @@ void lista_remover(LISTA* lista, char* nome)
             prox = aux->proximo;
 
             set_apagar(&(aux->set));
-            free(aux->nome);
             free(aux);
 
             aux = prox;
@@ -144,7 +139,7 @@ void lista_printar(LISTA* lista)
     NO* aux = lista->comeco;
     while(aux != NULL)
     {
-        printf("%s: ", aux->nome);
+        printf("%s: ", set_getNome(aux->set));
         set_imprimir(aux->set);
         printf("\n");
 
@@ -162,7 +157,6 @@ void lista_apagar(LISTA** lista)
         (*lista)->comeco = aux->proximo;
 
         set_apagar(&(aux->set));
-        free(aux->nome);
         free(aux);
 
         aux = (*lista)->comeco;

@@ -12,6 +12,8 @@ void avl_apagar(AVL** avl);
 /* Printa a árvore no percurso "em ordem" */
 void avl_emOrdem(AVL* avl);
 
+int avl_getAltura(AVL* avl);
+
 /* Funcoes de busca: */
 ITEM* avl_busca(AVL* avl, elem x);
 

@@ -7,7 +7,7 @@ typedef struct lista LISTA;
 
 LISTA* lista_criar();
 
-void lista_inserir(LISTA* lista, SET* x, char* nome);
+void lista_inserir(LISTA* lista, SET* x);
 
 void lista_remover(LISTA* lista, char* nome);
 

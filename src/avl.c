@@ -66,7 +66,8 @@ int no_altura(NO* no){
     return alt_dir;
 }
 
-int avl_altura(AVL* avl){
+int avl_getAltura(AVL* avl)
+{
     return no_altura(avl->raiz);
 }
 
