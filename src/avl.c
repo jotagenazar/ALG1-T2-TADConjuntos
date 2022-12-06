@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 #include "../Includes/avl.h"
 
@@ -78,33 +77,18 @@ int get_balanceamento(NO* no){
 }
 
 /* Função para imprimir a AVL em ordem */
-void no_emOrdem(NO* no, tipo_t tipo){
+void no_emOrdem(NO* no){
     if(no == NULL) return;
 
-    no_emOrdem(no->esq, tipo);
-    item_print(no->item, tipo);
-    no_emOrdem(no->dir, tipo);
+    no_emOrdem(no->esq);
+    item_print(no->item);
+    no_emOrdem(no->dir);
 }
 
-void avl_emOrdem(AVL* avl, tipo_t tipo){
+void avl_emOrdem(AVL* avl){
     assert(avl != NULL);
 
-    no_emOrdem(avl->raiz, tipo);
-    printf("\n");
-}
-
-void no_posOrdem(NO* no, tipo_t tipo){
-    if(no == NULL) return;
-
-    no_posOrdem(no->esq, tipo);
-    no_posOrdem(no->dir, tipo);
-    item_print(no->item, tipo);
-}
-
-void avl_posOrdem(AVL* avl, tipo_t tipo){
-    assert(avl != NULL);
-
-    no_posOrdem(avl->raiz, tipo);
+    no_emOrdem(avl->raiz);
     printf("\n");
 }
 

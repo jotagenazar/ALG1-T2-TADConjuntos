@@ -1,7 +1,7 @@
 CC = gcc
 FLAGS = -g -std=c99 -Wall -Werror
 
-OBJECTS = main.o set.o avl.o item.o
+OBJECTS = main.o lista.o set.o avl.o item.o
 BIN = main
 
 all: $(OBJECTS)
@@ -9,6 +9,9 @@ all: $(OBJECTS)
 
 main.o: main.c Includes/set.h
 	$(CC) -c $(FLAGS) main.c
+
+lista.o: src/lista.c Includes/lista.h Includes/set.h
+	$(CC) -c $(FLAGS) src/lista.c
 
 set.o: src/set.c Includes/set.h Includes/avl.h
 	$(CC) -c $(FLAGS) src/set.c

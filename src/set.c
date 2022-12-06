@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 #include "../Includes/set.h"
 
@@ -29,9 +28,9 @@ void set_apagar(SET **s)
     avl_apagar(s);
 }
 
-void set_imprimir(SET *s, tipo_t tipo)
+void set_imprimir(SET *s)
 {
-    avl_emOrdem(s, tipo);
+    avl_emOrdem(s);
 }
 
 SET *set_uniao(SET *A, SET *B)

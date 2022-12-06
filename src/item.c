@@ -1,4 +1,3 @@
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,28 +33,10 @@ void set_valor(ITEM* item, elem valor){
     item->valor = valor;
 }
 
-void item_print(ITEM* item, tipo_t tipo){
+void item_print(ITEM* item)
+{
+    assert(item != NULL);
 
-    switch (tipo)
-    {
-        case INT:
-            printf("%d ", (int)item->valor);
-            break;
-        
-        case FLOAT:
-            printf("%.2f ", (float)item->valor);
-            break;
-
-        case DOUBLE:
-            printf("%.2lf ", (double)item->valor);
-            break;
-
-        case CHAR:
-            printf("%c ", (char)item->valor);
-            break;
-
-        default:
-            return;
-    }
+    printf("%d ", (int)item->valor);
     
 }
