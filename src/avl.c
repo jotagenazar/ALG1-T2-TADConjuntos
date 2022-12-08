@@ -41,9 +41,13 @@ void no_apagar_todos(NO** no){
 }
 
 void avl_apagar(AVL** avl){
-    assert(avl != NULL);
+    if(*avl == NULL || avl == NULL) return;
+
     no_apagar_todos(&(*avl)->raiz);
+
     free(*avl);
+
+    *avl = NULL;
 }
 
 /*Funcoes de caracteristicas da arvore:*/
@@ -203,6 +207,7 @@ NO* no_inserir(NO* no, ITEM* x){
     return no;
 }
 
+/* Insere um item na AVL, mantendo seu balanceamento */
 void avl_inserir(AVL* avl, ITEM* x){
     assert(avl != NULL);
     assert(x != NULL);
@@ -218,6 +223,7 @@ elem avl_max_valor(NO* no){
     return get_valor(no->item);
 }
 
+/* Apaga um nó presente na AVL, bem como o item presente */
 void no_apagar(NO** no){
     assert(no != NULL);
 
@@ -228,6 +234,7 @@ void no_apagar(NO** no){
     *no = NULL;
 }
 
+/* Remove um nó da lista */
 NO* no_remover(NO* no, elem x){
 
     /*Percorrendo a arvore ateh achar o elemento.*/
@@ -314,12 +321,14 @@ NO* no_remover(NO* no, elem x){
     return no;
 }
 
+/* Remove um item na AVL, mantendo seu balanceamento */
 void avl_remover(AVL* avl, elem x){
     assert(avl != NULL);
 
     avl->raiz = no_remover(avl->raiz, x);
 }
 
+/* Copia todos os nós de uma árvore e retorna sua raiz */
 NO* avl_clone(NO* raiz)
 {
     if(raiz == NULL) return NULL;
@@ -333,6 +342,7 @@ NO* avl_clone(NO* raiz)
     return novo_no;
 }
 
+/* Criando uma cópia de uma árvore AVL. Importante na função avl_concat */
 AVL* avl_copiar(AVL* avl)
 {
     AVL* copia = avl_criar();
@@ -342,10 +352,13 @@ AVL* avl_copiar(AVL* avl)
     return copia;
 }
 
+/* Função recursiva para unir os elementos abaixo de "raiz" na árvore "união" */
 void _avl_concat(AVL* uniao, NO* raiz)
 {
+    /* Condição de parada */
     if(raiz == NULL) return;
 
+    /* Indo para a esquerda e direita da árvore */
     _avl_concat(uniao, raiz->esq);
     _avl_concat(uniao, raiz->dir);
 
@@ -360,6 +373,7 @@ void _avl_concat(AVL* uniao, NO* raiz)
 
 }
 
+/* Concatenando duas árvores AVL. A árvore "A" é a copiada e deve ser a maior para diminuir a complexidade */
 AVL* avl_concat(AVL* A, AVL* B)
 {
     AVL* uniao = avl_copiar(A);
@@ -367,29 +381,31 @@ AVL* avl_concat(AVL* A, AVL* B)
     _avl_concat(uniao, B->raiz);
 
     return uniao;
+
 }
 
-
+/* Função recursiva para intersectar os elementos abaixo de "raiz_a" com a "arvore_b" */
 void _avl_intersec(AVL* intersec, NO* raiz_a, AVL* arvore_b)
 {
+    /* Condição de parada */
     if(raiz_a == NULL) return;
 
+    /* Indo para esquerda e direta da raiz_a */
     _avl_intersec(intersec, raiz_a->esq, arvore_b);
     _avl_intersec(intersec, raiz_a->dir, arvore_b);
 
     elem elemento_atual = get_valor(raiz_a->item);
 
+    /* Caso o elemento da árvore "a" não exista  na árvore "b", não adicionamos na intersecção */
     if((avl_busca(arvore_b, elemento_atual)) == NULL) return;
 
+    /* Caso contrário, criamos um novo item e adicionamos na interseccao */
     ITEM* novo_item = item_criar(elemento_atual);
     avl_inserir(intersec, novo_item);
 }
 
-AVL* avl_intersec(AVL* A, AVL* B)
+/* Intersecta duas árvores e retorna o resultado por parâmetro na árvore "intersec" */
+void avl_intersec(AVL* intersec, AVL* A, AVL* B)
 {
-    AVL* intersec = avl_criar();
-
     _avl_intersec(intersec, A->raiz, B);
-
-    return intersec;
 }

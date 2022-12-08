@@ -1,0 +1,102 @@
+./main
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Inserir o nome do novo conjunto: Inserir os elementos do conjunto: 
+
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Inserir o nome do novo conjunto: Inserir os elementos do conjunto: 
+
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Insira o nome do primeiro conjunto: Insira o nome do segundo conjunto: Insira o nome do conjunto uniao: 
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Insira o nome do primeiro conjunto: Insira o nome do segundo conjunto: Insira o nome do conjunto intersecção: 
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+impares: 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 
+
+primos: 2 3 5 7 11 13 17 19 23 31 37 41 43 47 
+
+impares+{2}: 1 2 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 
+
+primos-{2}: 3 5 7 11 13 17 19 23 31 37 41 43 47 
+
+
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Obrigado por usar o programa!
+
+
+

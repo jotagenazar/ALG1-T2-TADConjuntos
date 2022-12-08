@@ -1,0 +1,102 @@
+./main
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Inserir o nome do novo conjunto: Inserir os elementos do conjunto: 
+
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Inserir o nome do novo conjunto: Inserir os elementos do conjunto: 
+
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Insira o nome do primeiro conjunto: Insira o nome do segundo conjunto: Insira o nome do conjunto uniao: 
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Insira o nome do primeiro conjunto: Insira o nome do segundo conjunto: Insira o nome do conjunto intersecção: 
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+mult2: 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 
+
+mult5: 5 10 20 25 30 35 40 45 50 
+
+mult2+mult5: 2 4 5 6 8 10 12 14 16 18 20 22 24 25 26 28 30 32 34 35 36 38 40 42 44 45 46 48 50 52 54 56 58 60 
+
+mult10: 10 20 30 40 50 
+
+
+
+
+Digite uma das opções abaixo: 
+0. Fechar o Programa 
+1. Printar um conjunto 
+2. Printar todos os conjuntos 
+3. Criar conjunto 
+4. Remover conjunto 
+5. Inserir elemento em um conjunto 
+6. Remover elemento de um conjunto 
+7. Criar união 
+8. Criar Intersecção 
+9. Verificar se elemento pertence 
+
+Obrigado por usar o programa!
+
+
+
