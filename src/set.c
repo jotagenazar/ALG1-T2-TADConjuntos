@@ -99,8 +99,8 @@ SET *set_interseccao(SET *A, SET *B, char* nome)
     /* Alocamos memória para um novo conjunto */
     SET* intersec = set_criar(nome);
 
-    /* Selecionamos a árvore com maior altura como base das comparações, diminuindo número de buscas */
-    if(avl_getAltura(A->arvore) > avl_getAltura(B->arvore))
+    /* Selecionamos a árvore com menor altura como base das comparações, diminuindo número de buscas */
+    if(avl_getAltura(A->arvore) < avl_getAltura(B->arvore))
     {
         avl_intersec(intersec->arvore, A->arvore, B->arvore);
     }
